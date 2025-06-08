@@ -42,8 +42,8 @@
 
     .hero {
       position: relative;
-      background: url('https://img.freepik.com/premium-photo/security-guard-shopping-mall_1016675-506.jpg?ga=GA1.1.1005843723.1747907489&semt=ais_items_boosted&w=740') center/cover no-repeat;
-      height: 100vh;
+      background: url('https://img.freepik.com/premium-photo/security-guard-shopping-mall_1016675-506.jpg') center/cover no-repeat;
+      min-height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -65,14 +65,47 @@
 
     .hero h1 {
       font-family: 'Poppins', sans-serif;
-      font-size: 4rem;
+      font-size: 2.2rem;
       font-weight: 800;
       color: #00f7ff;
     }
 
     .hero p {
-      font-size: 1.25rem;
+      font-size: 1.1rem;
       color: #e0e0e0;
+    }
+
+    @media (min-width: 576px) {
+      .hero h1 {
+        font-size: 2.7rem;
+      }
+      .hero p {
+        font-size: 1.2rem;
+      }
+    }
+    @media (min-width: 768px) {
+      .hero h1 {
+        font-size: 4rem;
+      }
+      .hero p {
+        font-size: 1.5rem;
+      }
+    }
+    @media (max-width: 575.98px) {
+      .hero {
+        min-height: 65vh;
+        padding: 2rem 0;
+      }
+      .hero h1 {
+        font-size: 1.4rem;
+      }
+      .hero p {
+        font-size: 1rem;
+      }
+      .btn-custom {
+        padding: 0.6rem 1.2rem;
+        font-size: 1rem;
+      }
     }
 
     .btn-custom {
@@ -83,10 +116,14 @@
       margin-top: 2rem;
       border: none;
       transition: background-color 0.3s;
+      border-radius: 8px;
     }
 
-    .btn-custom:hover {
+    .btn-custom:hover,
+    .btn-custom:focus {
       background-color: #00d5e4;
+      outline: none;
+      box-shadow: 0 0 0 2px #00f7ff55;
     }
 
     .section-title {
@@ -94,8 +131,18 @@
       color: #00f7ff;
       margin-bottom: 2rem;
       font-family: 'Poppins', sans-serif;
-      font-size: 2.5rem;
+      font-size: 2rem;
       font-weight: 700;
+    }
+    @media (min-width: 768px) {
+      .section-title {
+        font-size: 2.5rem;
+      }
+    }
+    @media (max-width: 575.98px) {
+      .section-title {
+        font-size: 1.3rem;
+      }
     }
 
     .card {
@@ -105,6 +152,9 @@
       transition: transform 0.3s, box-shadow 0.3s;
       color: #fff;
       overflow: hidden;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
     }
 
     .card:hover {
@@ -115,8 +165,20 @@
     .card img {
       height: 220px;
       object-fit: cover;
+      width: 100%;
       border-top-left-radius: 16px;
       border-top-right-radius: 16px;
+    }
+    @media (max-width: 575.98px) {
+      .card img {
+        height: 140px;
+      }
+    }
+    .card-body {
+      flex: 1 1 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
     }
 
     .card-title {
@@ -125,12 +187,20 @@
       font-weight: 600;
       color: #00f7ff;
     }
+    @media (max-width: 575.98px) {
+      .card-title {
+        font-size: 1.05rem;
+      }
+    }
 
+    /* Booking form style */
     form input,
     form textarea {
       background-color: #1a1a3b;
       border: 1px solid #00f7ff;
       color: #fff;
+      border-radius: 8px;
+      font-size: 1rem;
     }
 
     form input::placeholder,
@@ -138,16 +208,38 @@
       color: #aaa;
     }
 
+    form .form-control:focus {
+      border-color: #00d5e4;
+      box-shadow: 0 0 0 2px #00f7ffa0;
+      background-color: #20204a;
+      color: #fff;
+    }
+
+    /* Responsive spacing for form */
+    @media (max-width: 575.98px) {
+      #booking .row > [class*='col-'] {
+        margin-bottom: 1rem;
+      }
+    }
+
     footer {
       background-color: #0a0a1d;
       color: #aaa;
       padding: 2rem 0;
       text-align: center;
+      font-size: 1rem;
+    }
+    @media (max-width: 575.98px) {
+      footer {
+        font-size: 0.9rem;
+        padding: 1.2rem 0;
+      }
     }
 
     footer a {
       color: #00f7ff;
       text-decoration: none;
+      word-break: break-all;
     }
 
     footer a:hover {
@@ -187,27 +279,27 @@
 <section id="services" class="container py-5">
   <h2 class="section-title">Our Services</h2>
   <div class="row g-4">
-    <div class="col-md-4">
-      <div class="card">
-        <img src="https://img.freepik.com/premium-photo/security-guard-ensures-safety-order-lively-venue-concept-security-safety-order-venue-guard_864588-53830.jpg?ga=GA1.1.1005843723.1747907489&semt=ais_items_boosted&w=740" alt="Nightclub Security">
+    <div class="col-12 col-md-4">
+      <div class="card h-100">
+        <img src="https://img.freepik.com/premium-photo/security-guard-ensures-safety-order-lively-venue-concept-security-safety-order-venue-guard_864588-53830.jpg" alt="Nightclub Security">
         <div class="card-body">
           <h5 class="card-title">Nightclub Security</h5>
           <p>Secure your venue with elite bouncers trained for nightlife safety.</p>
         </div>
       </div>
     </div>
-    <div class="col-md-4">
-      <div class="card">
-        <img src="https://img.freepik.com/premium-photo/security-guard-asians-nightclub_51903-125.jpg?ga=GA1.1.1005843723.1747907489&semt=ais_items_boosted&w=740" alt="Event Protection">
+    <div class="col-12 col-md-4">
+      <div class="card h-100">
+        <img src="https://img.freepik.com/premium-photo/security-guard-asians-nightclub_51903-125.jpg" alt="Event Protection">
         <div class="card-body">
           <h5 class="card-title">Event Protection</h5>
           <p>Weddings, parties, or concerts—we provide seamless, visible protection.</p>
         </div>
       </div>
     </div>
-    <div class="col-md-4">
-      <div class="card">
-        <img src=https://th.bing.com/th/id/OIP.PUAd9Cc68LbUhrj79sDnTAHaD3?w=344&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" alt="VIP Escorts">
+    <div class="col-12 col-md-4">
+      <div class="card h-100">
+        <img src="https://th.bing.com/th/id/OIP.PUAd9Cc68LbUhrj79sDnTAHaD3?w=344&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7" alt="VIP Escorts">
         <div class="card-body">
           <h5 class="card-title">VIP Escorts</h5>
           <p>Confidential, discrete VIP security for celebrities, CEOs, and dignitaries.</p>
@@ -220,15 +312,17 @@
 <!-- Booking Section -->
 <section id="booking" class="container py-5">
   <h2 class="section-title">Book Now</h2>
-  <form action="https://formsubmit.co/6c66ee5944c5e035e396136eb4ce9568" method="POST">
+  <form id="bookingForm">
     <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_next" value="#">
+
     <div class="row g-3">
-      <div class="col-md-6"><input name="name" type="text" class="form-control" placeholder="Full Name" required></div>
-      <div class="col-md-6"><input name="email" type="email" class="form-control" placeholder="Email" required></div>
-      <div class="col-md-6"><input name="phone" type="tel" class="form-control" placeholder="Phone Number" required></div>
-      <div class="col-md-6"><input name="event" type="text" class="form-control" placeholder="Event Type" required></div>
-      <div class="col-md-6"><input name="datetime" type="datetime-local" class="form-control" required></div>
-      <div class="col-md-6"><input name="bouncers" type="number" class="form-control" placeholder="Number of Bouncers" required></div>
+      <div class="col-12 col-md-6"><input name="name" type="text" class="form-control" placeholder="Full Name" required></div>
+      <div class="col-12 col-md-6"><input name="email" type="email" class="form-control" placeholder="Email" required></div>
+      <div class="col-12 col-md-6"><input name="phone" type="tel" class="form-control" placeholder="Phone Number" required></div>
+      <div class="col-12 col-md-6"><input name="event" type="text" class="form-control" placeholder="Event Type" required></div>
+      <div class="col-12 col-md-6"><input name="datetime" type="datetime-local" class="form-control" required></div>
+      <div class="col-12 col-md-6"><input name="bouncers" type="number" class="form-control" placeholder="Number of Bouncers" required></div>
       <div class="col-12"><textarea name="message" class="form-control" rows="4" placeholder="Additional Info"></textarea></div>
       <div class="col-12 text-center"><button type="submit" class="btn btn-custom px-5">Submit</button></div>
     </div>
@@ -238,9 +332,34 @@
 <!-- Footer -->
 <footer id="contact">
   <p>&copy; 2025 EazyProtect. All rights reserved.</p>
-  <p><a href="mailto:okoncompassionate@gmail.com" subject="subject text">bouncerforcebookings@gmail.com</a></p>
+  <p><a href="mailto:bouncerforcebookings@gmail.com">bouncerforcebookings@gmail.com</a></p>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  document.getElementById("bookingForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+    const form = e.target;
+    const formData = new FormData(form);
+
+    fetch("https://formsubmit.co/ajax/6c66ee5944c5e035e396136eb4ce9568", {
+      method: "POST",
+      body: formData
+    })
+    .then(response => {
+      if (response.ok) {
+        alert("Thank you! Your booking was sent successfully.");
+        setTimeout(() => {
+          window.location.href = "#";
+        }, 2000);
+      } else {
+        alert("Oops! Something went wrong. Please try again.");
+      }
+    })
+    .catch(error => {
+      alert("Error: " + error.message);
+    });
+  });
+</script>
 </body>
 </html>
