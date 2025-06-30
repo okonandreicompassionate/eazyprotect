@@ -1,377 +1,405 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>BouncerForce – Elite Security</title>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>BouncerForce – Elite Security</title>
 
-  <!-- Bootstrap & Google Fonts -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;800&family=Roboto:wght@400;500&display=swap" rel="stylesheet"/>
+    <!-- Bootstrap & Google Fonts -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;800&family=Roboto:wght@400;500&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-p...Vw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  <style>
-    body {
-      font-family: 'Roboto', sans-serif;
-      background-color: #0b0b24;
-      color: #f1f1f1;
-      scroll-behavior: smooth;
-    }
-    nav {
-      background: rgba(9, 9, 29, 0.8);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-    }
-    .navbar-brand {
-      font-family: 'Poppins', sans-serif;
-      font-weight: 800;
-      font-size: 1.8rem;
-      color: #00f7ff !important;
-    }
-    .nav-link {
-      color: #ccc !important;
-      margin-left: 1rem;
-      font-weight: 500;
-    }
-    .nav-link:hover {
-      color: #00f7ff !important;
-    }
-    .hero {
-      position: relative;
-      background: url('https://img.freepik.com/premium-photo/security-guard-shopping-mall_1016675-506.jpg') center/cover no-repeat;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-    }
-    .hero::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0, 0, 0, 0.6);
-      z-index: 1;
-    }
-    .hero .container {
-      position: relative;
-      z-index: 2;
-    }
-    .hero h1 {
-      font-family: 'Poppins', sans-serif;
-      font-size: 2.2rem;
-      font-weight: 800;
-      color: #00f7ff;
-    }
-    .hero p {
-      font-size: 1.1rem;
-      color: #e0e0e0;
-    }
-    @media (min-width: 576px) {
-      .hero h1 {
-        font-size: 2.7rem;
-      }
-      .hero p {
-        font-size: 1.2rem;
-      }
-    }
-    @media (min-width: 768px) {
-      .hero h1 {
-        font-size: 4rem;
-      }
-      .hero p {
-        font-size: 1.5rem;
-      }
-    }
-    @media (max-width: 575.98px) {
-      .hero {
-        min-height: 65vh;
-        padding: 2rem 0;
-      }
-      .hero h1 {
-        font-size: 1.4rem;
-      }
-      .hero p {
-        font-size: 1rem;
-      }
-      .btn-custom {
-        padding: 0.6rem 1.2rem;
-        font-size: 1rem;
-      }
-    }
-    .btn-custom {
-      background-color: #00f7ff;
-      color: #0b0b24;
-      font-weight: 600;
-      padding: 0.75rem 2rem;
-      margin-top: 2rem;
-      border: none;
-      transition: background-color 0.3s;
-      border-radius: 8px;
-    }
-    .btn-custom:hover,
-    .btn-custom:focus {
-      background-color: #00d5e4;
-      outline: none;
-      box-shadow: 0 0 0 2px #00f7ff55;
-    }
-    .section-title {
-      text-align: center;
-      color: #00f7ff;
-      margin-bottom: 2rem;
-      font-family: 'Poppins', sans-serif;
-      font-size: 2rem;
-      font-weight: 700;
-    }
-    @media (min-width: 768px) {
-      .section-title {
-        font-size: 2.5rem;
-      }
-    }
-    @media (max-width: 575.98px) {
-      .section-title {
+
+    <style>
+        body {
+        font-family: 'Roboto', sans-serif;
+        background-color: #0b0b24;
+        color: #f1f1f1;
+        scroll-behavior: smooth;
+        }
+        nav {
+        background: rgba(9, 9, 29, 0.8);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        }
+        .navbar-brand {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 800;
+        font-size: 1.8rem;
+        color: #00f7ff !important;
+        }
+        .nav-link {
+        color: #ccc !important;
+        margin-left: 1rem;
+        font-weight: 500;
+        }
+        .nav-link:hover {
+        color: #00f7ff !important;
+        }
+        .hero {
+        position: relative;
+        background: url('https://img.freepik.com/premium-photo/security-guard-shopping-mall_1016675-506.jpg') center/cover no-repeat;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        }
+        .hero::before {
+        content: '';
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: 1;
+        }
+        .hero .container {
+        position: relative;
+        z-index: 2;
+        }
+        .hero h1 {
+        font-family: 'Poppins', sans-serif;
+        font-size: 2.2rem;
+        font-weight: 800;
+        color: #00f7ff;
+        }
+        .hero p {
+        font-size: 1.1rem;
+        color: #e0e0e0;
+        }
+        @media (min-width: 576px) {
+        .hero h1 {
+            font-size: 2.7rem;
+        }
+        .hero p {
+            font-size: 1.2rem;
+        }
+        }
+        @media (min-width: 768px) {
+        .hero h1 {
+            font-size: 4rem;
+        }
+        .hero p {
+            font-size: 1.5rem;
+        }
+        }
+        @media (max-width: 575.98px) {
+        .hero {
+            min-height: 65vh;
+            padding: 2rem 0;
+        }
+        .hero h1 {
+            font-size: 1.4rem;
+        }
+        .hero p {
+            font-size: 1rem;
+        }
+        .btn-custom {
+            padding: 0.6rem 1.2rem;
+            font-size: 1rem;
+        }
+        }
+        .btn-custom {
+        background-color: #00f7ff;
+        color: #0b0b24;
+        font-weight: 600;
+        padding: 0.75rem 2rem;
+        margin-top: 2rem;
+        border: none;
+        transition: background-color 0.3s;
+        border-radius: 8px;
+        }
+        .btn-custom:hover,
+        .btn-custom:focus {
+        background-color: #00d5e4;
+        outline: none;
+        box-shadow: 0 0 0 2px #00f7ff55;
+        }
+        .section-title {
+        text-align: center;
+        color: #00f7ff;
+        margin-bottom: 2rem;
+        font-family: 'Poppins', sans-serif;
+        font-size: 2rem;
+        font-weight: 700;
+        }
+        @media (min-width: 768px) {
+        .section-title {
+            font-size: 2.5rem;
+        }
+        }
+        @media (max-width: 575.98px) {
+        .section-title {
+            font-size: 1.3rem;
+        }
+        }
+        .card {
+        background: linear-gradient(to bottom right, #151538, #1b1b3c);
+        border: none;
+        border-radius: 16px;
+        transition: transform 0.3s, box-shadow 0.3s;
+        color: #fff;
+        overflow: hidden;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        }
+        .card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 0 20px rgba(0, 247, 255, 0.3);
+        }
+        .card img {
+        height: 220px;
+        object-fit: cover;
+        width: 100%;
+        border-top-left-radius: 16px;
+        border-top-right-radius: 16px;
+        }
+        @media (max-width: 575.98px) {
+        .card img {
+            height: 140px;
+        }
+        }
+        .card-body {
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        }
+        .card-title {
+        font-family: 'Poppins', sans-serif;
         font-size: 1.3rem;
-      }
-    }
-    .card {
-      background: linear-gradient(to bottom right, #151538, #1b1b3c);
-      border: none;
-      border-radius: 16px;
-      transition: transform 0.3s, box-shadow 0.3s;
-      color: #fff;
-      overflow: hidden;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-    }
-    .card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 0 20px rgba(0, 247, 255, 0.3);
-    }
-    .card img {
-      height: 220px;
-      object-fit: cover;
-      width: 100%;
-      border-top-left-radius: 16px;
-      border-top-right-radius: 16px;
-    }
-    @media (max-width: 575.98px) {
-      .card img {
-        height: 140px;
-      }
-    }
-    .card-body {
-      flex: 1 1 auto;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-    }
-    .card-title {
-      font-family: 'Poppins', sans-serif;
-      font-size: 1.3rem;
-      font-weight: 600;
-      color: #00f7ff;
-    }
-    @media (max-width: 575.98px) {
-      .card-title {
-        font-size: 1.05rem;
-      }
-    }
-    form input,
-    form textarea {
-      background-color: #1a1a3b;
-      border: 1px solid #00f7ff;
-      color: #fff;
-      border-radius: 8px;
-      font-size: 1rem;
-    }
-    form input::placeholder,
-    form textarea::placeholder {
-      color: #aaa;
-    }
-    form .form-control:focus {
-      border-color: #00d5e4;
-      box-shadow: 0 0 0 2px #00f7ffa0;
-      background-color: #20204a;
-      color: #fff;
-    }
-    @media (max-width: 575.98px) {
-      #booking .row > [class*='col-'] {
-        margin-bottom: 1rem;
-      }
-    }
-    .alert-custom {
-      position: fixed;
-      top: 80px;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 2000;
-      padding: 1.2rem 2rem;
-      min-width: 260px;
-      max-width: 90vw;
-      background-color: #00f7ff;
-      color: #0b0b24;
-      font-weight: bold;
-      border-radius: 8px;
-      box-shadow: 0 6px 24px 0 #0008;
-      text-align: center;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.4s;
-    }
-    .alert-custom.show {
-      opacity: 1;
-      pointer-events: all;
-    }
-    footer {
-      background-color: #0a0a1d;
-      color: #aaa;
-      padding: 2rem 0;
-      text-align: center;
-      font-size: 1rem;
-    }
-    @media (max-width: 575.98px) {
-      footer {
-        font-size: 0.9rem;
-        padding: 1.2rem 0;
-      }
-    }
-    footer a {
-      color: #00f7ff;
-      text-decoration: none;
-      word-break: break-all;
-    }
-    footer a:hover {
-      text-decoration: underline;
-    }
-  </style>
-</head>
-<body>
+        font-weight: 600;
+        color: #00f7ff;
+        }
+        @media (max-width: 575.98px) {
+        .card-title {
+            font-size: 1.05rem;
+        }
+        }
+        form input,
+        form textarea {
+        background-color: #1a1a3b;
+        border: 1px solid #00f7ff;
+        color: #fff;
+        border-radius: 8px;
+        font-size: 1rem;
+        }
+        form input::placeholder,
+        form textarea::placeholder {
+        color: #aaa;
+        }
+        form .form-control:focus {
+        border-color: #00d5e4;
+        box-shadow: 0 0 0 2px #00f7ffa0;
+        background-color: #20204a;
+        color: #fff;
+        }
+        @media (max-width: 575.98px) {
+        #booking .row > [class*='col-'] {
+            margin-bottom: 1rem;
+        }
+        }
+        .alert-custom {
+        position: fixed;
+        top: 80px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 2000;
+        padding: 1.2rem 2rem;
+        min-width: 260px;
+        max-width: 90vw;
+        background-color: #00f7ff;
+        color: #0b0b24;
+        font-weight: bold;
+        border-radius: 8px;
+        box-shadow: 0 6px 24px 0 #0008;
+        text-align: center;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.4s;
+        }
+        .alert-custom.show {
+        opacity: 1;
+        pointer-events: all;
+        }
+        footer {
+        background-color: #0a0a1d;
+        color: #aaa;
+        padding: 2rem 0;
+        text-align: center;
+        font-size: 1rem;
+        }
+        @media (max-width: 575.98px) {
+        footer {
+            font-size: 0.9rem;
+            padding: 1.2rem 0;
+        }
+        }
+        footer a {
+        color: #00f7ff;
+        text-decoration: none;
+        word-break: break-all;
+        }
+        footer a:hover {
+        text-decoration: underline;
+        }
+    </style>
+    </head>
+    <body>
 
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow">
-  <div class="container">
-    <a class="navbar-brand" href="#">EazyProtect</a>
-    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div id="navbarNav" class="collapse navbar-collapse justify-content-end">
-      <ul class="navbar-nav">
-        <li class="nav-item"><a href="#services" class="nav-link">Services</a></li>
-        <li class="nav-item"><a href="#booking" class="nav-link">Booking</a></li>
-        <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-<!-- Custom alert for submission feedback -->
-<div id="customAlert" class="alert-custom">Thank you! Your booking was sent successfully.</div>
-
-<!-- Hero Section -->
-<section class="hero">
-  <div class="container">
-    <h1>Elite Protection</h1>
-    <p>Top-tier Bouncers for Events, Clubs, and VIPs</p>
-    <a href="#booking" class="btn btn-custom">Book Now</a>
-  </div>
-</section>
-
-<!-- Services Section -->
-<section id="services" class="container py-5">
-  <h2 class="section-title">Our Services</h2>
-  <div class="row g-4">
-    <div class="col-12 col-md-4">
-      <div class="card h-100">
-        <img src="https://img.freepik.com/premium-photo/security-guard-ensures-safety-order-lively-venue-concept-security-safety-order-venue-guard_864588-53830.jpg" alt="Nightclub Security">
-        <div class="card-body">
-          <h5 class="card-title">Nightclub Security</h5>
-          <p>Secure your venue with elite bouncers trained for nightlife safety.</p>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow">
+    <div class="container">
+        <a class="navbar-brand" href="#">EazyProtect</a>
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="navbarNav" class="collapse navbar-collapse justify-content-end">
+        <ul class="navbar-nav">
+            <li class="nav-item"><a href="#services" class="nav-link">Services</a></li>
+            <li class="nav-item"><a href="#booking" class="nav-link">Booking</a></li>
+            <li class="nav-item"><a href="#f-contact" class="nav-link">Contact</a></li>
+        </ul>
         </div>
-      </div>
     </div>
-    <div class="col-12 col-md-4">
-      <div class="card h-100">
-        <img src="https://img.freepik.com/premium-photo/security-guard-asians-nightclub_51903-125.jpg" alt="Event Protection">
-        <div class="card-body">
-          <h5 class="card-title">Event Protection</h5>
-          <p>Weddings, parties, or concerts—we provide seamless, visible protection.</p>
+    </nav>
+
+    <!-- Custom alert for submission feedback -->
+    <div id="customAlert" class="alert-custom">Thank you! Your booking was sent successfully.</div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+    <div class="container">
+        <h1>Elite Protection</h1>
+        <p>Top-tier Bouncers for Events, Clubs, and VIPs</p>
+        <a href="#booking" class="btn btn-custom">Book Now</a>
+    </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="container py-5">
+    <h2 class="section-title">Our Services</h2>
+    <div class="row g-4">
+        <div class="col-12 col-md-4">
+        <div class="card h-100">
+            <img src="https://img.freepik.com/premium-photo/security-guard-ensures-safety-order-lively-venue-concept-security-safety-order-venue-guard_864588-53830.jpg" alt="Nightclub Security">
+            <div class="card-body">
+            <h5 class="card-title">Nightclub Security</h5>
+            <p>Secure your venue with elite bouncers trained for nightlife safety.</p>
+            </div>
         </div>
-      </div>
-    </div>
-    <div class="col-12 col-md-4">
-      <div class="card h-100">
-        <img src="https://th.bing.com/th/id/OIP.PUAd9Cc68LbUhrj79sDnTAHaD3?w=344&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7" alt="VIP Escorts">
-        <div class="card-body">
-          <h5 class="card-title">VIP Escorts</h5>
-          <p>Confidential, discrete VIP security for celebrities, CEOs, and dignitaries.</p>
         </div>
-      </div>
+        <div class="col-12 col-md-4">
+        <div class="card h-100">
+            <img src="https://img.freepik.com/premium-photo/security-guard-asians-nightclub_51903-125.jpg" alt="Event Protection">
+            <div class="card-body">
+            <h5 class="card-title">Event Protection</h5>
+            <p>Weddings, parties, or concerts—we provide seamless, visible protection.</p>
+            </div>
+        </div>
+        </div>
+        <div class="col-12 col-md-4">
+        <div class="card h-100">
+            <img src="https://th.bing.com/th/id/OIP.PUAd9Cc68LbUhrj79sDnTAHaD3?w=344&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7" alt="VIP Escorts">
+            <div class="card-body">
+                <h5 class="card-title">VIP Escorts</h5>
+            <p>Confidential, discrete VIP security for celebrities, CEOs, and dignitaries.</p>
+            
+
+    </p>
+            </div>
+        </div>
+        </div>
+        <div class="col-12 col-md-4 offset-md-4">
+        <div class="card h-100">
+            <img src="https://i.imgur.com/jkCmDyb.jpeg" alt="cctv camera">
+            <div class="card-body">
+        <h5 class="card-title">CCTV installation</h5>
+            <p>We provide reliable, high-quality surveillance solutions for homes, offices, and businesses—ensuring 24/7 security, remote monitoring, and peace of mind. Whether you need a simple setup or a full-scale security system, our expert team is here to help.
+
+            </div>
+        </div>
+        </div>
     </div>
-  </div>
-</section>
+    </section>
 
-<!-- Booking Section -->
-<section id="booking" class="container py-5">
-  <h2 class="section-title">Book Now</h2>
-  <form id="bookingForm">
-    <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_next" value="#">
+    <!-- Booking Section -->
+    <section id="booking" class="container py-5">
+    <h2 class="section-title">Book Now</h2>
+    <form id="bookingForm">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="#">
 
-    <div class="row g-3">
-      <div class="col-12 col-md-6"><input name="name" type="text" class="form-control" placeholder="Full Name" required></div>
-      <div class="col-12 col-md-6"><input name="email" type="email" class="form-control" placeholder="Email" required></div>
-      <div class="col-12 col-md-6"><input name="phone" type="tel" class="form-control" placeholder="Phone Number" required></div>
-      <div class="col-12 col-md-6"><input name="event" type="text" class="form-control" placeholder="Event Type" required></div>
-      <div class="col-12 col-md-6"><input name="datetime" type="datetime-local" class="form-control" required></div>
-      <div class="col-12 col-md-6"><input name="bouncers" type="number" class="form-control" placeholder="Number of Bouncers" required></div>
-      <div class="col-12"><textarea name="message" class="form-control" rows="4" placeholder="Additional Info"></textarea></div>
-      <div class="col-12 text-center"><button type="submit" class="btn btn-custom px-5">Submit</button></div>
-    </div>
-  </form>
-</section>
+        <div class="row g-3">
+        <div class="col-12 col-md-6"><input name="name" type="text" class="form-control" placeholder="Full Name" required></div>
+        <div class="col-12 col-md-6"><input name="email" type="email" class="form-control" placeholder="Email" required></div>
+        <div class="col-12 col-md-6"><input name="phone" type="tel" class="form-control" placeholder="Phone Number" required></div>
+        <div class="col-12 col-md-6"><input name="event" type="text" class="form-control" placeholder="Event Type" required></div>
+        <div class="col-12 col-md-6"><input name="datetime" type="datetime-local" class="form-control" required></div>
+        <div class="col-12 col-md-6"><input name="bouncers" type="number" class="form-control" placeholder="Number of Bouncers" required></div>
+        <div class="col-12"><textarea name="message" class="form-control" rows="4" placeholder="Additional Info"></textarea></div>
+        <div class="col-12 text-center"><button type="submit" class="btn btn-custom px-5">Submit</button></div>
+        </div>
+    </form>
+    </section>
 
-<!-- Footer -->
-<footer id="contact">
+   <!-- Footer -->
+<footer id="f-contact">
   <p>&copy; 2025 EazyProtect. All rights reserved.</p>
-  <p><a href="mailto:bouncerforcebookings@gmail.com">bouncerforcebookings@gmail.com</a></p>
+  <p>Contact us: <a href="mailto:eazyprotect@gmail.com">eazyprotect@gmail.com</a></p>
+  <div class="mt-3">
+    <a href="https://facebook.com/share/199JZ8dx7s" target="_blank" class="text-decoration-none me-3" style="color: #00f7ff;">
+      <i class="fab fa-facebook fa-lg"></i>
+    </a>
+    <a href="https://instagram.com/eazy33251" target="_blank" class="text-decoration-none me-3" style="color: #00f7ff;">
+      <i class="fab fa-instagram fa-lg"></i>
+    </a>
+    <a href="https://x.com/@eazyprotect " target="_blank" class="text-decoration-none" style="color: #00f7ff;">
+      <i class="fab fa-x-twitter fa-lg"></i>
+    </a>
+  </div>
 </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-  // Show a custom alert message, then scroll to top and hide it
-  function showCustomAlert(message) {
-    const alertBox = document.getElementById("customAlert");
-    alertBox.textContent = message;
-    alertBox.classList.add("show");
-    setTimeout(() => {
-      alertBox.classList.remove("show");
-    }, 3500); // visible for 3.5 seconds
-  }
 
-  document.getElementById("bookingForm").addEventListener("submit", function(e) {
-    e.preventDefault();
-    const form = e.target;
-    const formData = new FormData(form);
 
-    fetch("https://formsubmit.co/ajax/6c66ee5944c5e035e396136eb4ce9568", {
-      method: "POST",
-      body: formData
-    })
-    .then(response => {
-      if (response.ok) {
-        showCustomAlert("Thank you! Your booking was sent successfully.");
-        form.reset();
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+    // Show a custom alert message, then scroll to top and hide it
+    function showCustomAlert(message) {
+        const alertBox = document.getElementById("customAlert");
+        alertBox.textContent = message;
+        alertBox.classList.add("show");
         setTimeout(() => {
-          window.location.hash = "";
-          window.scrollTo({ top: 0, behavior: "smooth" });
-        }, 1800);
-      } else {
-        showCustomAlert("Oops! Something went wrong. Please try again.");
-      }
-    })
-    .catch(error => {
-      showCustomAlert("Error: " + error.message);
+        alertBox.classList.remove("show");
+        }, 3500); // visible for 3.5 seconds
+    }
+
+    document.getElementById("bookingForm").addEventListener("submit", function(e) {
+        e.preventDefault();
+        const form = e.target;
+        const formData = new FormData(form);
+
+        fetch("https://formsubmit.co/ajax/c4cb7b726245524a8f956f4ad3fb86ba", {
+        method: "POST",
+        body: formData
+        })
+        .then(response => {
+        if (response.ok) {
+            showCustomAlert("Thank you! Your booking was sent successfully.");
+            form.reset();
+            setTimeout(() => {
+            window.location.hash = "";
+            window.scrollTo({ top: 0, behavior: "smooth" });
+            }, 1800);
+        } else {
+            showCustomAlert("Oops! Something went wrong. Please try again.");
+        }
+        })
+        .catch(error => {
+        showCustomAlert("Error: " + error.message);
+        });
     });
-  });
-</script>
-</body>
-</html>
+    </script>
+    </body>
+    </html>
